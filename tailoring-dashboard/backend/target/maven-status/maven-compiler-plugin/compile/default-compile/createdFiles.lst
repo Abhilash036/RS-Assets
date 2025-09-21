@@ -1,0 +1,11 @@
+com\tailoring\dto\CustomerResponse.class
+com\tailoring\entity\Customer.class
+com\tailoring\controller\CustomerController.class
+com\tailoring\repository\CustomerRepository.class
+com\tailoring\service\CustomerService.class
+com\tailoring\TailoringApplication.class
+com\tailoring\dto\AnalyticsResponse$RevenueData.class
+com\tailoring\dto\CustomerRequest.class
+com\tailoring\dto\AnalyticsResponse.class
+com\tailoring\dto\AnalyticsResponse$ChartData.class
+com\tailoring\dto\AnalyticsResponse$WorkTypeData.class
