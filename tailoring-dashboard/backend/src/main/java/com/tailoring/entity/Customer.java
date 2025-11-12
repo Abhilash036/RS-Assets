@@ -3,6 +3,7 @@ package com.tailoring.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,52 +11,50 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "customers")
 public class Customer {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "customer_name", nullable = false)
+    @Column(nullable = false, name = "customer_name")
     private String customerName;
-
-    private Integer age;
 
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @Column(name = "bill_amount")
-    private BigDecimal billAmount;
+    private String address;
 
     @Column(name = "work_date")
     private LocalDate workDate;
 
+    @Column(name = "delivery_date")
+    private LocalDate deliveryDate;
+
     @Column(name = "work_type")
     private String workType;
 
+    @Column(name = "garment_type")
+    private String garmentType;
+
+    @Column(name = "bill_amount", precision = 10, scale = 2)
+    private BigDecimal billAmount;
+
+    @Column(columnDefinition = "TEXT")
+    private String measurements;
+
+    @Column(columnDefinition = "TEXT")
     private String notes;
 
     @CreationTimestamp
-    @Column(name = "created_at", nullable = true, updatable = false)  // Changed to nullable = true
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
-    @Column(name = "updated_at", nullable = true)  // Changed to nullable = true
+    @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    // Default constructor (required by JPA)
+    // Constructors
     public Customer() {}
-
-    // Constructor with parameters (for your service)
-    public Customer(String customerName, Integer age, String phoneNumber,
-                    BigDecimal billAmount, LocalDate workDate, String workType, String notes) {
-        this.customerName = customerName;
-        this.age = age;
-        this.phoneNumber = phoneNumber;
-        this.billAmount = billAmount;
-        this.workDate = workDate;
-        this.workType = workType;
-        this.notes = notes;
-        // createdAt and updatedAt will be set automatically by @CreationTimestamp and @UpdateTimestamp
-    }
 
     // Getters and Setters
     public Long getId() {
@@ -74,14 +73,6 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -90,12 +81,12 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
-    public BigDecimal getBillAmount() {
-        return billAmount;
+    public String getAddress() {
+        return address;
     }
 
-    public void setBillAmount(BigDecimal billAmount) {
-        this.billAmount = billAmount;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public LocalDate getWorkDate() {
@@ -106,12 +97,44 @@ public class Customer {
         this.workDate = workDate;
     }
 
+    public LocalDate getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public void setDeliveryDate(LocalDate deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
     public String getWorkType() {
         return workType;
     }
 
     public void setWorkType(String workType) {
         this.workType = workType;
+    }
+
+    public String getGarmentType() {
+        return garmentType;
+    }
+
+    public void setGarmentType(String garmentType) {
+        this.garmentType = garmentType;
+    }
+
+    public BigDecimal getBillAmount() {
+        return billAmount;
+    }
+
+    public void setBillAmount(BigDecimal billAmount) {
+        this.billAmount = billAmount;
+    }
+
+    public String getMeasurements() {
+        return measurements;
+    }
+
+    public void setMeasurements(String measurements) {
+        this.measurements = measurements;
     }
 
     public String getNotes() {
