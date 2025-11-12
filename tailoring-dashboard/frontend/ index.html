@@ -482,57 +482,55 @@
                     </div>
                     <div class="form-group"><label for="billAmount">Bill Amount (₹) *</label> <input type="number" id="billAmount" step="0.01" required>
                     </div>
-                </div><!-- Blouse Measurements -->
+                </div><!-- Blouse Measurements (Common for all garment types) -->
                 <div id="blouse-measurements" class="measurement-section" style="display: none;">
                     <h3>📏 Blouse Measurements</h3>
                     <div class="form-grid">
-                        <div class="form-group"><label for="blouse_length">Length</label> <input type="text" id="blouse_length" placeholder="e.g., 15 inches">
+                        <div class="form-group"><label for="blouse_type">Blouse Type</label> <select id="blouse_type"> <option value="">Select Blouse Type</option> <option value="Princess Cut">Princess Cut</option> <option value="Single Dart">Single Dart</option> <option value="Kateri">Kateri</option> <option value="Padded">Padded</option> </select>
                         </div>
-                        <div class="form-group"><label for="blouse_full_shoulder">Full Shoulder</label> <input type="text" id="blouse_full_shoulder">
+                        <div class="form-group"><label for="blouse_full_length">Full Length</label> <input type="text" id="blouse_full_length" placeholder="e.g., 15 inches">
                         </div>
                         <div class="form-group"><label for="blouse_shoulder">Shoulder</label> <input type="text" id="blouse_shoulder">
                         </div>
+                        <div class="form-group"><label for="blouse_arm_hole">Arm Hole</label> <input type="text" id="blouse_arm_hole">
+                        </div>
+                        <div class="form-group"><label for="blouse_dot_point">Dot Point</label> <input type="text" id="blouse_dot_point">
+                        </div>
                         <div class="form-group"><label for="blouse_upper_chest">Upper Chest</label> <input type="text" id="blouse_upper_chest">
+                        </div>
+                        <div class="form-group"><label for="blouse_lower_chest">Lower Chest</label> <input type="text" id="blouse_lower_chest">
                         </div>
                         <div class="form-group"><label for="blouse_chest">Chest</label> <input type="text" id="blouse_chest">
                         </div>
-                        <div class="form-group"><label for="blouse_lower_waist">Lower Waist</label> <input type="text" id="blouse_lower_waist">
-                        </div>
-                        <div class="form-group"><label for="blouse_shoulder_to_apex">Shoulder to Apex</label> <input type="text" id="blouse_shoulder_to_apex">
-                        </div>
-                        <div class="form-group"><label for="blouse_shoulder_to_waist">Shoulder to Waist</label> <input type="text" id="blouse_shoulder_to_waist">
-                        </div>
-                        <div class="form-group"><label for="blouse_apex_to_apex">Apex to Apex</label> <input type="text" id="blouse_apex_to_apex">
+                        <div class="form-group"><label for="blouse_point_to_apex">Point to Apex Point</label> <input type="text" id="blouse_point_to_apex">
                         </div>
                         <div class="form-group"><label for="blouse_sleeve_length">Sleeve Length</label> <input type="text" id="blouse_sleeve_length">
                         </div>
-                        <div class="form-group"><label for="blouse_sleeve_loose">Sleeve Loose</label> <input type="text" id="blouse_sleeve_loose">
+                        <div class="form-group"><label for="blouse_biceps">Biceps</label> <input type="text" id="blouse_biceps">
                         </div>
-                        <div class="form-group"><label for="blouse_bicep_loose">Bicep Loose</label> <input type="text" id="blouse_bicep_loose">
+                        <div class="form-group"><label for="blouse_front_neck_depth">Front Neck Depth</label> <input type="text" id="blouse_front_neck_depth">
                         </div>
-                        <div class="form-group"><label for="blouse_arm_hole">Arm Hole</label> <input type="text" id="blouse_arm_hole">
-                        </div>
-                        <div class="form-group"><label for="blouse_front_neck_deep">Front Neck Deep</label> <input type="text" id="blouse_front_neck_deep">
-                        </div>
-                        <div class="form-group"><label for="blouse_back_neck_deep">Back Neck Deep</label> <input type="text" id="blouse_back_neck_deep">
+                        <div class="form-group"><label for="blouse_back_neck_depth">Back Neck Depth</label> <input type="text" id="blouse_back_neck_depth">
                         </div>
                     </div>
                 </div><!-- Lehenga Measurements -->
                 <div id="lehenga-measurements" class="measurement-section" style="display: none;">
                     <h3>📏 Lehenga Measurements</h3>
                     <div class="form-grid">
-                        <div class="form-group"><label for="lehenga_length">Length</label> <input type="text" id="lehenga_length" placeholder="e.g., 40 inches">
+                        <div class="form-group"><label for="lehenga_full_length">Full Length</label> <input type="text" id="lehenga_full_length" placeholder="e.g., 40 inches">
                         </div>
                         <div class="form-group"><label for="lehenga_waist">Waist</label> <input type="text" id="lehenga_waist">
+                        </div>
+                        <div class="form-group"><label for="lehenga_type">Lehenga Type</label> <select id="lehenga_type"> <option value="">Select Type</option> <option value="Pleats">Pleats</option> <option value="Gather">Gather</option> <option value="Umbrella">Umbrella</option> </select>
                         </div>
                     </div>
                 </div><!-- Frock Measurements -->
                 <div id="frock-measurements" class="measurement-section" style="display: none;">
                     <h3>📏 Frock Measurements</h3>
                     <div class="form-grid">
-                        <div class="form-group"><label for="frock_length">Length</label> <input type="text" id="frock_length" placeholder="e.g., 38 inches">
+                        <div class="form-group"><label for="frock_body_length">Body Length</label> <input type="text" id="frock_body_length" placeholder="e.g., 38 inches">
                         </div>
-                        <div class="form-group"><label for="frock_body_length">Body Length</label> <input type="text" id="frock_body_length">
+                        <div class="form-group"><label for="frock_full_length">Full Length</label> <input type="text" id="frock_full_length">
                         </div>
                         <div class="form-group"><label for="frock_front_length">Front Length</label> <input type="text" id="frock_front_length">
                         </div>
@@ -543,11 +541,13 @@
                 <div id="kurti-measurements" class="measurement-section" style="display: none;">
                     <h3>📏 Kurti Measurements</h3>
                     <div class="form-grid">
-                        <div class="form-group"><label for="kurti_length">Length</label> <input type="text" id="kurti_length" placeholder="e.g., 42 inches">
+                        <div class="form-group"><label for="kurti_full_length">Full Length</label> <input type="text" id="kurti_full_length" placeholder="e.g., 42 inches">
                         </div>
-                        <div class="form-group"><label for="kurti_hip">Hip</label> <input type="text" id="kurti_hip">
+                        <div class="form-group"><label for="kurti_waist">Waist</label> <input type="text" id="kurti_waist">
                         </div>
                         <div class="form-group"><label for="kurti_side_cut">Side Cut</label> <input type="text" id="kurti_side_cut">
+                        </div>
+                        <div class="form-group"><label for="kurti_collar_round">Collar Round</label> <input type="text" id="kurti_collar_round">
                         </div>
                         <div class="form-group"><label for="kurti_front_length">Front Length</label> <input type="text" id="kurti_front_length">
                         </div>
@@ -558,15 +558,21 @@
                 <div id="pant-measurements" class="measurement-section" style="display: none;">
                     <h3>📏 Pant Measurements</h3>
                     <div class="form-grid">
-                        <div class="form-group"><label for="pant_length">Length</label> <input type="text" id="pant_length" placeholder="e.g., 38 inches">
+                        <div class="form-group"><label for="pant_full_length">Full Length</label> <input type="text" id="pant_full_length" placeholder="e.g., 38 inches">
                         </div>
-                        <div class="form-group"><label for="pant_waist">Waist</label> <input type="text" id="pant_waist">
-                        </div>
-                        <div class="form-group"><label for="pant_ankle_loose">Ankle Loose</label> <input type="text" id="pant_ankle_loose">
+                        <div class="form-group"><label for="pant_hips">Hips</label> <input type="text" id="pant_hips">
                         </div>
                         <div class="form-group"><label for="pant_knee">Knee</label> <input type="text" id="pant_knee">
                         </div>
+                        <div class="form-group"><label for="pant_ankle">Ankle</label> <input type="text" id="pant_ankle">
+                        </div>
+                        <div class="form-group"><label for="pant_waist">Waist</label> <input type="text" id="pant_waist">
+                        </div>
                         <div class="form-group"><label for="pant_thigh">Thigh</label> <input type="text" id="pant_thigh">
+                        </div>
+                        <div class="form-group"><label for="pant_knee_round">Knee Round</label> <input type="text" id="pant_knee_round">
+                        </div>
+                        <div class="form-group"><label for="pant_ankle_round">Ankle Round</label> <input type="text" id="pant_ankle_round">
                         </div>
                     </div>
                 </div>
@@ -753,60 +759,91 @@
     function showMeasurementFields() {
         const garmentType = document.getElementById('garmentType').value;
 
-        document.querySelectorAll('.measurement-section').forEach(section => {
-            section.style.display = 'none';
-        });
+        // Hide all garment-specific measurement sections
+        document.getElementById('lehenga-measurements').style.display = 'none';
+        document.getElementById('frock-measurements').style.display = 'none';
+        document.getElementById('kurti-measurements').style.display = 'none';
+        document.getElementById('pant-measurements').style.display = 'none';
 
+        // Always show blouse measurements for all garment types
         if (garmentType) {
+            document.getElementById('blouse-measurements').style.display = 'block';
+
+            // Show the specific garment measurement section
             const sectionId = garmentType + '-measurements';
             const section = document.getElementById(sectionId);
             if (section) {
                 section.style.display = 'block';
             }
+        } else {
+            document.getElementById('blouse-measurements').style.display = 'none';
         }
     }
 
     // Collect measurements based on garment type
     function collectMeasurements() {
         const garmentType = document.getElementById('garmentType').value;
-        const measurements = {};
+        const measurements = {
+            blouse: {},
+            garmentSpecific: {}
+        };
 
+        // Always collect blouse measurements for all garment types
+        if (garmentType) {
+            measurements.blouse = {
+                type: document.getElementById('blouse_type').value,
+                fullLength: document.getElementById('blouse_full_length').value,
+                shoulder: document.getElementById('blouse_shoulder').value,
+                armHole: document.getElementById('blouse_arm_hole').value,
+                dotPoint: document.getElementById('blouse_dot_point').value,
+                upperChest: document.getElementById('blouse_upper_chest').value,
+                lowerChest: document.getElementById('blouse_lower_chest').value,
+                chest: document.getElementById('blouse_chest').value,
+                pointToApex: document.getElementById('blouse_point_to_apex').value,
+                sleeveLength: document.getElementById('blouse_sleeve_length').value,
+                biceps: document.getElementById('blouse_biceps').value,
+                frontNeckDepth: document.getElementById('blouse_front_neck_depth').value,
+                backNeckDepth: document.getElementById('blouse_back_neck_depth').value
+            };
+        }
+
+        // Collect garment-specific measurements
         if (garmentType === 'blouse') {
-            measurements.length = document.getElementById('blouse_length').value;
-            measurements.fullShoulder = document.getElementById('blouse_full_shoulder').value;
-            measurements.shoulder = document.getElementById('blouse_shoulder').value;
-            measurements.upperChest = document.getElementById('blouse_upper_chest').value;
-            measurements.chest = document.getElementById('blouse_chest').value;
-            measurements.lowerWaist = document.getElementById('blouse_lower_waist').value;
-            measurements.shoulderToApex = document.getElementById('blouse_shoulder_to_apex').value;
-            measurements.shoulderToWaist = document.getElementById('blouse_shoulder_to_waist').value;
-            measurements.apexToApex = document.getElementById('blouse_apex_to_apex').value;
-            measurements.sleeveLength = document.getElementById('blouse_sleeve_length').value;
-            measurements.sleeveLoose = document.getElementById('blouse_sleeve_loose').value;
-            measurements.bicepLoose = document.getElementById('blouse_bicep_loose').value;
-            measurements.armHole = document.getElementById('blouse_arm_hole').value;
-            measurements.frontNeckDeep = document.getElementById('blouse_front_neck_deep').value;
-            measurements.backNeckDeep = document.getElementById('blouse_back_neck_deep').value;
+            // For blouse-only orders, measurements are already in blouse section
+            measurements.garmentSpecific = {};
         } else if (garmentType === 'lehenga') {
-            measurements.length = document.getElementById('lehenga_length').value;
-            measurements.waist = document.getElementById('lehenga_waist').value;
+            measurements.garmentSpecific = {
+                fullLength: document.getElementById('lehenga_full_length').value,
+                waist: document.getElementById('lehenga_waist').value,
+                type: document.getElementById('lehenga_type').value
+            };
         } else if (garmentType === 'frock') {
-            measurements.length = document.getElementById('frock_length').value;
-            measurements.bodyLength = document.getElementById('frock_body_length').value;
-            measurements.frontLength = document.getElementById('frock_front_length').value;
-            measurements.backLength = document.getElementById('frock_back_length').value;
+            measurements.garmentSpecific = {
+                bodyLength: document.getElementById('frock_body_length').value,
+                fullLength: document.getElementById('frock_full_length').value,
+                frontLength: document.getElementById('frock_front_length').value,
+                backLength: document.getElementById('frock_back_length').value
+            };
         } else if (garmentType === 'kurti') {
-            measurements.length = document.getElementById('kurti_length').value;
-            measurements.hip = document.getElementById('kurti_hip').value;
-            measurements.sideCut = document.getElementById('kurti_side_cut').value;
-            measurements.frontLength = document.getElementById('kurti_front_length').value;
-            measurements.backLength = document.getElementById('kurti_back_length').value;
+            measurements.garmentSpecific = {
+                fullLength: document.getElementById('kurti_full_length').value,
+                waist: document.getElementById('kurti_waist').value,
+                sideCut: document.getElementById('kurti_side_cut').value,
+                collarRound: document.getElementById('kurti_collar_round').value,
+                frontLength: document.getElementById('kurti_front_length').value,
+                backLength: document.getElementById('kurti_back_length').value
+            };
         } else if (garmentType === 'pant') {
-            measurements.length = document.getElementById('pant_length').value;
-            measurements.waist = document.getElementById('pant_waist').value;
-            measurements.ankleLoose = document.getElementById('pant_ankle_loose').value;
-            measurements.knee = document.getElementById('pant_knee').value;
-            measurements.thigh = document.getElementById('pant_thigh').value;
+            measurements.garmentSpecific = {
+                fullLength: document.getElementById('pant_full_length').value,
+                hips: document.getElementById('pant_hips').value,
+                knee: document.getElementById('pant_knee').value,
+                ankle: document.getElementById('pant_ankle').value,
+                waist: document.getElementById('pant_waist').value,
+                thigh: document.getElementById('pant_thigh').value,
+                kneeRound: document.getElementById('pant_knee_round').value,
+                ankleRound: document.getElementById('pant_ankle_round').value
+            };
         }
 
         return measurements;
@@ -991,46 +1028,92 @@
         }
 
         const measurementLabels = {
-            length: 'Length',
-            fullShoulder: 'Full Shoulder',
+            // Blouse measurements
+            type: 'Blouse Type',
+            fullLength: 'Full Length',
             shoulder: 'Shoulder',
-            upperChest: 'Upper Chest',
-            chest: 'Chest',
-            lowerWaist: 'Lower Waist',
-            shoulderToApex: 'Shoulder to Apex',
-            shoulderToWaist: 'Shoulder to Waist',
-            apexToApex: 'Apex to Apex',
-            sleeveLength: 'Sleeve Length',
-            sleeveLoose: 'Sleeve Loose',
-            bicepLoose: 'Bicep Loose',
             armHole: 'Arm Hole',
-            frontNeckDeep: 'Front Neck Deep',
-            backNeckDeep: 'Back Neck Deep',
+            dotPoint: 'Dot Point',
+            upperChest: 'Upper Chest',
+            lowerChest: 'Lower Chest',
+            chest: 'Chest',
+            pointToApex: 'Point to Apex',
+            sleeveLength: 'Sleeve Length',
+            biceps: 'Biceps',
+            frontNeckDepth: 'Front Neck Depth',
+            backNeckDepth: 'Back Neck Depth',
+            // Garment-specific measurements
             waist: 'Waist',
+            type: 'Type',
             bodyLength: 'Body Length',
             frontLength: 'Front Length',
             backLength: 'Back Length',
-            hip: 'Hip',
             sideCut: 'Side Cut',
-            ankleLoose: 'Ankle Loose',
+            collarRound: 'Collar Round',
+            hips: 'Hips',
             knee: 'Knee',
-            thigh: 'Thigh'
+            ankle: 'Ankle',
+            thigh: 'Thigh',
+            kneeRound: 'Knee Round',
+            ankleRound: 'Ankle Round'
         };
 
-        let html = '<div class="measurements-display">';
-        for (const [key, value] of Object.entries(measurements)) {
-            if (value) {
-                html += `
-                    <div class="measurement-item">
-                        <div class="measurement-label">${measurementLabels[key] || key}</div>
-                        <div class="measurement-value">${value}</div>
-                    </div>
-                `;
+        let html = '';
+
+        // Display blouse measurements if available
+        if (measurements.blouse && Object.keys(measurements.blouse).length > 0) {
+            html += '<div style="margin-bottom: 15px;"><strong style="color: #667eea; font-size: 1.1em;">👗 Blouse Measurements:</strong></div>';
+            html += '<div class="measurements-display">';
+            for (const [key, value] of Object.entries(measurements.blouse)) {
+                if (value) {
+                    html += `
+                        <div class="measurement-item">
+                            <div class="measurement-label">${measurementLabels[key] || key}</div>
+                            <div class="measurement-value">${value}</div>
+                        </div>
+                    `;
+                }
+            }
+            html += '</div>';
+        }
+
+        // Display garment-specific measurements if available
+        if (measurements.garmentSpecific && Object.keys(measurements.garmentSpecific).length > 0) {
+            const hasValues = Object.values(measurements.garmentSpecific).some(v => v);
+            if (hasValues) {
+                html += '<div style="margin: 20px 0 15px 0;"><strong style="color: #764ba2; font-size: 1.1em;">📐 ' + (garmentType ? garmentType.charAt(0).toUpperCase() + garmentType.slice(1) : 'Garment') + ' Measurements:</strong></div>';
+                html += '<div class="measurements-display">';
+                for (const [key, value] of Object.entries(measurements.garmentSpecific)) {
+                    if (value) {
+                        html += `
+                            <div class="measurement-item">
+                                <div class="measurement-label">${measurementLabels[key] || key}</div>
+                                <div class="measurement-value">${value}</div>
+                            </div>
+                        `;
+                    }
+                }
+                html += '</div>';
             }
         }
-        html += '</div>';
 
-        return html;
+        // Fallback for old data format (flat structure)
+        if (!measurements.blouse && !measurements.garmentSpecific) {
+            html = '<div class="measurements-display">';
+            for (const [key, value] of Object.entries(measurements)) {
+                if (value) {
+                    html += `
+                        <div class="measurement-item">
+                            <div class="measurement-label">${measurementLabels[key] || key}</div>
+                            <div class="measurement-value">${value}</div>
+                        </div>
+                    `;
+                }
+            }
+            html += '</div>';
+        }
+
+        return html || '<div style="color: #666; font-style: italic;">No measurements recorded</div>';
     }
 
     // Delete customer
@@ -1370,5 +1453,5 @@
         document.getElementById('workDate').value = today;
     });
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99d6201eb0de1710',t:'MTc2Mjk1MTUxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99d70567e291473d',t:'MTc2Mjk2MDkwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
