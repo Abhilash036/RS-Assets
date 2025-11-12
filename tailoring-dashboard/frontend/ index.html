@@ -584,7 +584,7 @@
                 <div class="search-grid">
                     <div class="form-group"><label for="searchName">Search by Name</label> <input type="text" id="searchName" placeholder="Enter customer name">
                     </div>
-                    <div class="form-group"><label for="searchDate">Search by Work Date</label> <input type="date" id="searchDate">
+                    <div class="form-group"><label for="searchPhone">Search by Phone Number</label> <input type="tel" id="searchPhone" placeholder="Enter phone number">
                     </div>
                     <div class="form-group"><button class="btn btn-primary" onclick="searchCustomers()">Search</button>
                     </div>
@@ -863,23 +863,39 @@
     // Search customers
     async function searchCustomers() {
         const searchName = document.getElementById('searchName').value.trim();
-        const searchDate = document.getElementById('searchDate').value;
+        const searchPhone = document.getElementById('searchPhone').value.trim();
 
-        if (!searchName && !searchDate) {
-            showAlert('⚠️ Please enter a name or select a date to search', 'error');
+        if (!searchName && !searchPhone) {
+            showAlert('⚠️ Please enter a name or phone number to search', 'error');
             return;
         }
 
         try {
-            let url = API_BASE_URL;
+            let customers = [];
+
+            // Search by name
             if (searchName) {
-                url += `/search/name?name=${encodeURIComponent(searchName)}`;
-            } else if (searchDate) {
-                url += `/search/date?date=${searchDate}`;
+                const response = await fetch(`${API_BASE_URL}/search/name?name=${encodeURIComponent(searchName)}`);
+                customers = await response.json();
             }
 
-            const response = await fetch(url);
-            const customers = await response.json();
+            // Search by phone number (filter from all customers)
+            if (searchPhone) {
+                const response = await fetch(API_BASE_URL);
+                const allCustomers = await response.json();
+                const phoneResults = allCustomers.filter(customer =>
+                    customer.phoneNumber && customer.phoneNumber.includes(searchPhone)
+                );
+
+                // If both name and phone are provided, find intersection
+                if (searchName) {
+                    customers = customers.filter(c1 =>
+                        phoneResults.some(c2 => c1.id === c2.id)
+                    );
+                } else {
+                    customers = phoneResults;
+                }
+            }
 
             displaySearchResults(customers);
         } catch (error) {
@@ -1354,5 +1370,5 @@
         document.getElementById('workDate').value = today;
     });
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99d5f27ab08d421e',t:'MTc2Mjk0OTY0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99d6201eb0de1710',t:'MTc2Mjk1MTUxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
